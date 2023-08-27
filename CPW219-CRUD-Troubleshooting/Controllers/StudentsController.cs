@@ -102,5 +102,13 @@ namespace CPW219_CRUD_Troubleshooting.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            Student studentDetails = StudentDb.GetStudent(_context, id);
+
+            return View(studentDetails);
+        }
     }
 }
