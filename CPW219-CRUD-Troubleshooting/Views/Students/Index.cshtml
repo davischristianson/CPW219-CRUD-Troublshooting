@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CPW219_CRUD_Troubleshooting.Models.Student>
+﻿@model IEnumerable<Student>
 
 @{
     ViewData["Title"] = "Student List";
@@ -25,7 +25,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (Student item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.StudentId)
